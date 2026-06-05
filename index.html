@@ -7,23 +7,19 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap');
 :root{
-  --navy:#1F4E79; --blue:#2E75B6; --sky:#D6E4F0; --white:#FFFFFF;
-  --off:#F5F7FA; --dark:#1A1A2E; --mid:#444455; --light:#8888AA;
-  --accent:#C8A84B; --line:#DDE3EE;
+--navy:#1F4E79; --blue:#2E75B6; --sky:#D6E4F0; --white:#FFFFFF;
+--off:#F5F7FA; --dark:#1A1A2E; --mid:#444455; --light:#8888AA;
+--accent:#C8A84B; --line:#DDE3EE;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{font-family:'DM Sans',Georgia,sans-serif;font-weight:400;color:var(--mid);background:var(--off);line-height:1.7;}
-
-/* NAV */
 nav{background:var(--navy);display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:58px;position:sticky;top:0;z-index:100;border-bottom:2px solid var(--accent);}
 nav .logo{font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--white);}
 nav .logo span{color:var(--accent);}
 nav ul{list-style:none;display:flex;gap:1.6rem;}
 nav ul a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.8rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s;}
 nav ul a:hover{color:var(--white);}
-
-/* HERO — PAS de min-height:100vh */
 #hero{background:linear-gradient(150deg,var(--navy) 0%,#163E62 55%,#0D2840 100%);padding:80px 5% 60px;position:relative;overflow:hidden;}
 #hero::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.03) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;}
 .hero-inner{position:relative;z-index:1;max-width:800px;}
@@ -38,25 +34,21 @@ nav ul a:hover{color:var(--white);}
 .btn-primary:hover{background:#dbb95a;}
 .btn-outline{border:1px solid rgba(255,255,255,0.35);color:var(--white);background:transparent;}
 .btn-outline:hover{border-color:var(--white);background:rgba(255,255,255,0.07);}
+.btn-cv{border:1px solid rgba(200,168,75,0.5);color:var(--accent);background:rgba(200,168,75,0.08);display:inline-flex;align-items:center;gap:0.5rem;}
+.btn-cv:hover{background:rgba(200,168,75,0.18);border-color:var(--accent);}
 .hero-meta{display:flex;gap:2rem;flex-wrap:wrap;}
 .hero-meta span{font-size:0.78rem;color:rgba(255,255,255,0.45);letter-spacing:0.04em;}
 .hero-meta strong{color:rgba(255,255,255,0.75);}
-
-/* SECTIONS */
 section{padding:70px 5%;}
 .section-label{font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--blue);margin-bottom:0.4rem;}
 .section-title{font-family:'DM Serif Display',serif;font-size:clamp(1.6rem,3vw,2.4rem);color:var(--navy);line-height:1.15;margin-bottom:2.5rem;}
 .section-title em{font-style:italic;color:var(--blue);}
-
-/* À PROPOS */
 #apropos{background:var(--white);}
 .about-grid{display:grid;grid-template-columns:240px 1fr;gap:3.5rem;align-items:start;}
 .about-photo img{width:240px;aspect-ratio:3/4;object-fit:cover;border-radius:2px;border:1px solid var(--line);display:block;}
 .about-text p{margin-bottom:1.1rem;font-size:0.95rem;color:var(--mid);}
 .about-chips{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1.3rem;}
 .chip{background:var(--sky);color:var(--navy);font-size:0.76rem;font-weight:500;padding:4px 11px;border-radius:2px;border:1px solid var(--line);}
-
-/* CERTIFICATIONS */
 #certifications{background:var(--off);}
 .cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.3rem;}
 .cert-card{background:var(--white);border:1px solid var(--line);border-radius:2px;padding:1.6rem;display:flex;gap:1.1rem;align-items:flex-start;position:relative;overflow:hidden;}
@@ -65,8 +57,6 @@ section{padding:70px 5%;}
 .cert-body h3{font-family:'DM Serif Display',serif;font-size:0.97rem;color:var(--navy);margin-bottom:0.3rem;}
 .cert-body p{font-size:0.83rem;color:var(--mid);margin-bottom:0.6rem;line-height:1.6;}
 .cert-badge{display:inline-block;background:var(--sky);color:var(--navy);font-size:0.7rem;font-weight:600;padding:3px 9px;border-radius:2px;letter-spacing:0.03em;}
-
-/* COMPÉTENCES */
 #competences{background:var(--white);}
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.3rem;}
 .skill-card{background:var(--off);border:1px solid var(--line);padding:1.8rem;border-radius:2px;position:relative;overflow:hidden;}
@@ -76,8 +66,6 @@ section{padding:70px 5%;}
 .skill-card ul li{font-size:0.83rem;color:var(--mid);padding:4px 0;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:0.5rem;}
 .skill-card ul li:last-child{border-bottom:none;}
 .skill-card ul li::before{content:'';width:5px;height:5px;background:var(--blue);border-radius:50%;flex-shrink:0;}
-
-/* PROJETS */
 #projets{background:var(--off);}
 .proj-label{font-size:0.7rem;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;margin:1.8rem 0 0.7rem;padding-bottom:0.35rem;border-bottom:1px solid var(--line);}
 .proj-label.acad{color:var(--blue);}
@@ -92,8 +80,6 @@ section{padding:70px 5%;}
 .proj-tags{display:flex;flex-wrap:wrap;gap:0.35rem;}
 .tag{background:var(--sky);color:var(--navy);font-size:0.7rem;font-weight:600;padding:3px 9px;border-radius:2px;letter-spacing:0.03em;}
 .tag.perso{background:#fdf3dc;}
-
-/* FORMATION */
 #formation{background:var(--white);}
 .timeline{position:relative;padding-left:1.8rem;}
 .timeline::before{content:'';position:absolute;top:0;bottom:0;left:5px;width:2px;background:linear-gradient(to bottom,var(--navy),var(--sky));}
@@ -104,8 +90,6 @@ section{padding:70px 5%;}
 .tl-school{font-family:'DM Serif Display',serif;font-size:1rem;color:var(--navy);margin-bottom:0.18rem;}
 .tl-diploma{font-size:0.88rem;font-weight:500;color:var(--mid);margin-bottom:0.4rem;}
 .tl-courses{font-size:0.8rem;color:var(--light);font-style:italic;}
-
-/* CONTACT */
 #contact{background:linear-gradient(150deg,var(--navy) 0%,#163E62 100%);color:var(--white);}
 #contact .section-label{color:var(--accent);}
 #contact .section-title{color:var(--white);}
@@ -116,22 +100,17 @@ section{padding:70px 5%;}
 .c-icon{width:36px;height:36px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.9rem;}
 .c-text strong{display:block;font-size:0.72rem;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:0.12rem;}
 .c-text span{font-size:0.9rem;color:var(--white);}
-
-/* FOOTER */
 footer{background:#0D2840;text-align:center;padding:1.3rem;font-size:0.76rem;color:rgba(255,255,255,0.3);letter-spacing:0.04em;}
-
-/* RESPONSIVE */
 @media(max-width:768px){
-  nav ul{display:none;}
-  .about-grid{grid-template-columns:1fr;gap:2rem;}
-  .about-photo img{width:180px;}
-  .contact-grid{grid-template-columns:1fr;gap:2rem;}
-  .proj-card{grid-template-columns:1fr;}
+nav ul{display:none;}
+.about-grid{grid-template-columns:1fr;gap:2rem;}
+.about-photo img{width:180px;}
+.contact-grid{grid-template-columns:1fr;gap:2rem;}
+.proj-card{grid-template-columns:1fr;}
 }
 </style>
 </head>
 <body>
-
 <nav>
   <div class="logo">de <span>MEDEIROS</span></div>
   <ul>
@@ -146,13 +125,14 @@ footer{background:#0D2840;text-align:center;padding:1.3rem;font-size:0.76rem;col
 
 <section id="hero">
   <div class="hero-inner">
-    <div class="hero-tag">Portfolio &ndash; Informatique &amp; R&eacute;seaux</div>
+    <div class="hero-tag">Portfolio &ndash; D&eacute;veloppement &amp; R&eacute;seaux</div>
     <h1 class="hero-name">Makafui Komlan<br><span>de MEDEIROS</span></h1>
-    <p class="hero-subtitle">&Eacute;tudiant en Licence 2 &ndash; Administration &amp; S&eacute;curit&eacute; R&eacute;seau &middot; IAI-TOGO</p>
-    <p class="hero-desc">Passionn&eacute; par les r&eacute;seaux informatiques et la cybers&eacute;curit&eacute;, certifi&eacute; Cisco CCNA 1 &amp; 2, je recherche un stage pour mettre en pratique mes comp&eacute;tences et contribuer &agrave; la gestion d'infrastructures r&eacute;seau professionnelles.</p>
+    <p class="hero-subtitle">&Eacute;tudiant en Licence ASR &middot; D&eacute;veloppement &amp; Administration R&eacute;seau &middot; IAI-TOGO</p>
+    <p class="hero-desc">Polyvalent et passionn&eacute; par l'informatique, certifi&eacute; Cisco CCNA 1 &amp; 2, je combine des comp&eacute;tences en d&eacute;veloppement mobile (Flutter), back-end (ASP.NET Core, Flask) et en r&eacute;seaux &amp; cybers&eacute;curit&eacute;. Je recherche un stage dans l'un de ces deux domaines.</p>
     <div class="hero-btns">
       <a href="#projets" class="btn btn-primary">Voir mes projets</a>
       <a href="#contact" class="btn btn-outline">Me contacter</a>
+      <a href="CV_makafui_v2.docx" download class="btn btn-cv">&#8659; T&eacute;l&eacute;charger mon CV</a>
     </div>
     <div class="hero-meta">
       <span>Lom&eacute;, Togo</span>
@@ -167,20 +147,20 @@ footer{background:#0D2840;text-align:center;padding:1.3rem;font-size:0.76rem;col
   <h2 class="section-title">Qui <em>suis-je</em>&nbsp;?</h2>
   <div class="about-grid">
     <div class="about-photo">
-      <img src="data:image/jpeg;base64,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" alt="Makafui Komlan L&eacute;opoldo de MEDEIROS"/>
+      <img src="photo.jpg" alt="Makafui Komlan L&eacute;opoldo de MEDEIROS"/>
     </div>
     <div class="about-text">
-      <p>Je suis &eacute;tudiant en deuxi&egrave;me ann&eacute;e de <strong>Licence en Administration et S&eacute;curit&eacute; des R&eacute;seaux (ASR)</strong> &agrave; l'Institut Africain d'Informatique (IAI-TOGO), &agrave; Lom&eacute;. Titulaire d'un Baccalaur&eacute;at Scientifique avec mention Assez Bien, je me sp&eacute;cialise dans les r&eacute;seaux et la cybers&eacute;curit&eacute;.</p>
-      <p>Mon parcours m'a permis de d&eacute;velopper des comp&eacute;tences solides en administration r&eacute;seau, s&eacute;curit&eacute; informatique, programmation et bases de donn&eacute;es. Je suis &eacute;galement certifi&eacute; <strong>Cisco CCNA 1 &amp; CCNA 2</strong> par la Cisco Networking Academy.</p>
-      <p>Je recherche activement un stage afin d'approfondir mes connaissances dans un contexte professionnel et contribuer efficacement &agrave; la s&eacute;curisation d'infrastructures r&eacute;seau.</p>
+      <p>Je suis &eacute;tudiant en <strong>Licence ASR (Administration &amp; S&eacute;curit&eacute; des R&eacute;seaux)</strong> &agrave; l'Institut Africain d'Informatique (IAI-TOGO), &agrave; Lom&eacute;. Titulaire d'un Baccalaur&eacute;at Scientifique avec mention Assez Bien, je me sp&eacute;cialise &agrave; la fois dans les r&eacute;seaux et le d&eacute;veloppement logiciel.</p>
+      <p>Mon parcours m'a permis de d&eacute;velopper des comp&eacute;tences en administration r&eacute;seau, cybers&eacute;curit&eacute;, d&eacute;veloppement mobile (Flutter/Dart) et back-end (C#/ASP.NET Core, Flask, PHP). Je suis &eacute;galement certifi&eacute; <strong>Cisco CCNA 1 &amp; CCNA 2</strong>.</p>
+      <p>Polyvalent et autonome, je recherche activement un stage dans le d&eacute;veloppement logiciel ou l'administration r&eacute;seau pour contribuer &agrave; des projets concrets.</p>
       <div class="about-chips">
         <span class="chip">Cisco CCNA 1 &amp; 2</span>
-        <span class="chip">R&eacute;seaux &amp; Syst&egrave;mes</span>
-        <span class="chip">Cybers&eacute;curit&eacute;</span>
+        <span class="chip">Flutter / Dart</span>
+        <span class="chip">C# / ASP.NET Core</span>
+        <span class="chip">Python / Flask</span>
+        <span class="chip">R&eacute;seaux &amp; Cybers&eacute;curit&eacute;</span>
         <span class="chip">Linux</span>
-        <span class="chip">Python</span>
-        <span class="chip">PHP / Java</span>
-        <span class="chip">MySQL</span>
+        <span class="chip">MySQL / SQLite</span>
         <span class="chip">Lom&eacute;, Togo</span>
       </div>
     </div>
@@ -221,30 +201,48 @@ footer{background:#0D2840;text-align:center;padding:1.3rem;font-size:0.76rem;col
         <li>Adressage IP / IPv6, sous-r&eacute;seaux</li>
         <li>Mod&egrave;les OSI / TCP-IP</li>
         <li>Protocoles Ethernet, IP, TCP/UDP, DHCP, DNS</li>
-        <li>Linux Kali &amp; Manjaro</li>
-        <li>Administration syst&egrave;me CLI Linux</li>
-        <li>D&eacute;pannage mat&eacute;riel (BIOS/UEFI)</li>
+        <li>Linux (Pop!_OS, Ubuntu, Kali) &mdash; CLI</li>
+        <li>D&eacute;pannage mat&eacute;riel (BIOS/UEFI), dual-boot</li>
       </ul>
     </div>
     <div class="skill-card">
       <h3>Cybers&eacute;curit&eacute;</h3>
       <ul>
-        <li>Bonnes pratiques de s&eacute;curit&eacute; r&eacute;seau</li>
         <li>Segmentation r&eacute;seau et VLANs</li>
+        <li>Pare-feu iptables / nftables</li>
         <li>Tests de trafic (hping3, Wireshark)</li>
         <li>Analyse de paquets r&eacute;seau</li>
-        <li>D&eacute;tection de comportements anormaux</li>
-        <li>Pare-feu iptables / nftables</li>
+        <li>D&eacute;tection ARP spoofing</li>
+        <li>VPN WireGuard</li>
       </ul>
     </div>
     <div class="skill-card">
-      <h3>Programmation &amp; Web</h3>
+      <h3>D&eacute;veloppement Mobile</h3>
       <ul>
-        <li>Java &ndash; Programmation Orient&eacute;e Objet</li>
-        <li>PHP &ndash; D&eacute;veloppement web (PDO, SQL)</li>
-        <li>Python &ndash; Django, Flask, Scapy</li>
-        <li>MySQL / MariaDB &ndash; Mod&eacute;lisation relationnelle</li>
-        <li>HTML / CSS &ndash; WEB 1 &amp; WEB 2</li>
+        <li>Flutter / Dart &mdash; UI multi-&eacute;crans</li>
+        <li>StatelessWidget &amp; StatefulWidget</li>
+        <li>D&eacute;ploiement Android (physique &amp; AVD)</li>
+        <li>Android Studio &amp; VS Code</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <h3>Back-end &amp; API</h3>
+      <ul>
+        <li>C# / ASP.NET Core &mdash; REST API</li>
+        <li>Entity Framework Core + MySQL</li>
+        <li>Python &mdash; Flask, Django, Scapy</li>
+        <li>Auth JWT, bcrypt</li>
+        <li>PHP &mdash; PDO, CRUD</li>
+        <li>Java &mdash; POO, h&eacute;ritage</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <h3>Bases de donn&eacute;es &amp; Web</h3>
+      <ul>
+        <li>MySQL / MariaDB / SQLite</li>
+        <li>Mod&eacute;lisation relationnelle, SQL</li>
+        <li>ORM (Entity Framework)</li>
+        <li>HTML / CSS &mdash; WEB 1 &amp; WEB 2</li>
       </ul>
     </div>
     <div class="skill-card">
@@ -253,9 +251,8 @@ footer{background:#0D2840;text-align:center;padding:1.3rem;font-size:0.76rem;col
         <li>Apprentissage rapide de nouveaux outils</li>
         <li>Autonomie dans la r&eacute;solution de probl&egrave;mes</li>
         <li>Esprit d'analyse et rigueur technique</li>
-        <li>Fran&ccedil;ais &ndash; Courant</li>
-        <li>Anglais &ndash; Technique et professionnel</li>
-        <li>&Eacute;w&eacute; &ndash; Langue maternelle</li>
+        <li>Fran&ccedil;ais &mdash; Courant</li>
+        <li>Anglais &mdash; Notions techniques (lecture de doc)</li>
       </ul>
     </div>
   </div>
@@ -271,60 +268,84 @@ footer{background:#0D2840;text-align:center;padding:1.3rem;font-size:0.76rem;col
       <div class="proj-num">01</div>
       <div class="proj-body">
         <h3>Simulation d'un r&eacute;seau d'entreprise</h3>
-        <p>Conception d'une architecture r&eacute;seau compl&egrave;te avec VLANs, routage inter-VLAN et r&egrave;gles de s&eacute;curit&eacute;, simul&eacute;e sous Cisco Packet Tracer en appliquant les principes du CCNA.</p>
-        <div class="proj-tags"><span class="tag">VLAN</span><span class="tag">Routage</span><span class="tag">S&eacute;curit&eacute; r&eacute;seau</span><span class="tag">Cisco Packet Tracer</span><span class="tag">CCNA</span></div>
+        <p>Conception d'une architecture r&eacute;seau compl&egrave;te avec VLANs, routage inter-VLAN et r&egrave;gles de s&eacute;curit&eacute;, simul&eacute;e sous Cisco Packet Tracer.</p>
+        <div class="proj-tags"><span class="tag">VLAN</span><span class="tag">Routage</span><span class="tag">S&eacute;curit&eacute; r&eacute;seau</span><span class="tag">Cisco Packet Tracer</span></div>
       </div>
     </div>
     <div class="proj-card">
       <div class="proj-num">02</div>
       <div class="proj-body">
         <h3>Serveur web &amp; DNS sous Linux</h3>
-        <p>Configuration et administration d'un serveur web Apache et d'un serveur DNS BIND9 sur Linux. Gestion des zones DNS, des enregistrements et de la configuration du serveur.</p>
-        <div class="proj-tags"><span class="tag">Linux</span><span class="tag">Apache</span><span class="tag">BIND9</span><span class="tag">DNS</span><span class="tag">Administration serveur</span></div>
+        <p>Configuration et administration d'un serveur Apache et d'un serveur DNS BIND9 sur Linux. Gestion des zones DNS et des enregistrements.</p>
+        <div class="proj-tags"><span class="tag">Linux</span><span class="tag">Apache</span><span class="tag">BIND9</span><span class="tag">DNS</span></div>
       </div>
     </div>
     <div class="proj-card">
       <div class="proj-num">03</div>
       <div class="proj-body">
         <h3>Supervision r&eacute;seau</h3>
-        <p>Mise en place d'un outil de monitoring pour la surveillance en temps r&eacute;el des &eacute;quipements et des services r&eacute;seau. Configuration des alertes et des tableaux de bord.</p>
-        <div class="proj-tags"><span class="tag">Nagios</span><span class="tag">Zabbix</span><span class="tag">Monitoring</span><span class="tag">Linux</span><span class="tag">Infrastructure</span></div>
+        <p>Mise en place d'un outil de monitoring pour la surveillance en temps r&eacute;el des &eacute;quipements r&eacute;seau. Configuration des alertes et tableaux de bord.</p>
+        <div class="proj-tags"><span class="tag">Nagios</span><span class="tag">Zabbix</span><span class="tag">Monitoring</span><span class="tag">Linux</span></div>
       </div>
     </div>
   </div>
 
-  <p class="proj-label perso">Projets personnels &ndash; En cours</p>
+  <p class="proj-label perso">Projets personnels</p>
   <div class="proj-list">
     <div class="proj-card perso">
       <div class="proj-num">04</div>
       <div class="proj-body">
-        <h3>Pare-feu sous Linux</h3>
-        <p>Configuration d'un pare-feu avec iptables et nftables pour s&eacute;curiser un r&eacute;seau local. D&eacute;finition de r&egrave;gles de filtrage, NAT et journalisation des tentatives d'intrusion.</p>
-        <div class="proj-tags"><span class="tag perso">iptables</span><span class="tag perso">nftables</span><span class="tag perso">Linux</span><span class="tag perso">S&eacute;curit&eacute; r&eacute;seau</span><span class="tag perso">NAT</span></div>
+        <h3>connect_project &mdash; App Flutter</h3>
+        <p>Application mobile Flutter avec UI d'authentification (login &amp; inscription), th&egrave;me vert. D&eacute;ploy&eacute;e et test&eacute;e sur appareil physique Android (itel A665L).</p>
+        <div class="proj-tags"><span class="tag perso">Flutter</span><span class="tag perso">Dart</span><span class="tag perso">Android</span><span class="tag perso">UI/UX</span></div>
       </div>
     </div>
     <div class="proj-card perso">
       <div class="proj-num">05</div>
       <div class="proj-body">
-        <h3>Analyse de trafic avec Wireshark</h3>
-        <p>Capture et analyse de paquets r&eacute;seau pour identifier des anomalies. D&eacute;tection de scans de ports, d'ARP spoofing et d'autres comportements suspects sur le r&eacute;seau local.</p>
-        <div class="proj-tags"><span class="tag perso">Wireshark</span><span class="tag perso">TCP/IP</span><span class="tag perso">Analyse de paquets</span><span class="tag perso">ARP</span><span class="tag perso">Cybers&eacute;curit&eacute;</span></div>
+        <h3>API STOP &mdash; ASP.NET Core</h3>
+        <p>API REST compl&egrave;te en C# avec ASP.NET Core, Entity Framework Core et MySQL (Pomelo). Architecture propre avec gestion des entit&eacute;s Categorie et Produits.</p>
+        <div class="proj-tags"><span class="tag perso">C#</span><span class="tag perso">ASP.NET Core</span><span class="tag perso">Entity Framework</span><span class="tag perso">MySQL</span></div>
       </div>
     </div>
     <div class="proj-card perso">
       <div class="proj-num">06</div>
       <div class="proj-body">
-        <h3>VPN avec WireGuard</h3>
-        <p>Installation et configuration d'un serveur VPN WireGuard sur Linux pour s&eacute;curiser les communications. Gestion des cl&eacute;s, tunnels chiffr&eacute;s et r&egrave;gles de routage.</p>
-        <div class="proj-tags"><span class="tag perso">WireGuard</span><span class="tag perso">VPN</span><span class="tag perso">Linux</span><span class="tag perso">Chiffrement</span><span class="tag perso">Routage</span></div>
+        <h3>Gestion d'actifs &mdash; Flask</h3>
+        <p>Application web Flask + SQLite de gestion d'actifs d'entreprise&nbsp;: auth JWT, bcrypt, carte Folium interactive, export PDF/GPX et upload de photos.</p>
+        <div class="proj-tags"><span class="tag perso">Python</span><span class="tag perso">Flask</span><span class="tag perso">SQLite</span><span class="tag perso">JWT</span><span class="tag perso">Folium</span></div>
       </div>
     </div>
     <div class="proj-card perso">
       <div class="proj-num">07</div>
       <div class="proj-body">
+        <h3>Pare-feu sous Linux</h3>
+        <p>Configuration d'un pare-feu avec iptables et nftables pour s&eacute;curiser un r&eacute;seau local. R&egrave;gles de filtrage, NAT et journalisation des tentatives d'intrusion.</p>
+        <div class="proj-tags"><span class="tag perso">iptables</span><span class="tag perso">nftables</span><span class="tag perso">Linux</span><span class="tag perso">NAT</span></div>
+      </div>
+    </div>
+    <div class="proj-card perso">
+      <div class="proj-num">08</div>
+      <div class="proj-body">
+        <h3>Analyse de trafic avec Wireshark</h3>
+        <p>Capture et analyse de paquets r&eacute;seau. D&eacute;tection de scans de ports, d'ARP spoofing et de comportements suspects sur le r&eacute;seau local.</p>
+        <div class="proj-tags"><span class="tag perso">Wireshark</span><span class="tag perso">TCP/IP</span><span class="tag perso">ARP</span><span class="tag perso">Cybers&eacute;curit&eacute;</span></div>
+      </div>
+    </div>
+    <div class="proj-card perso">
+      <div class="proj-num">09</div>
+      <div class="proj-body">
+        <h3>VPN avec WireGuard</h3>
+        <p>Installation et configuration d'un serveur VPN WireGuard sur Linux. Gestion des cl&eacute;s, tunnels chiffr&eacute;s et r&egrave;gles de routage.</p>
+        <div class="proj-tags"><span class="tag perso">WireGuard</span><span class="tag perso">VPN</span><span class="tag perso">Linux</span><span class="tag perso">Chiffrement</span></div>
+      </div>
+    </div>
+    <div class="proj-card perso">
+      <div class="proj-num">10</div>
+      <div class="proj-body">
         <h3>Script Python de scan r&eacute;seau</h3>
-        <p>D&eacute;veloppement d'un script Python avec Scapy pour scanner les h&ocirc;tes actifs d'un r&eacute;seau local, identifier les ports ouverts et les services en cours d'ex&eacute;cution.</p>
-        <div class="proj-tags"><span class="tag perso">Python</span><span class="tag perso">Scapy</span><span class="tag perso">Scan r&eacute;seau</span><span class="tag perso">Ports</span><span class="tag perso">Automatisation</span></div>
+        <p>Script Python avec Scapy pour scanner les h&ocirc;tes actifs d'un r&eacute;seau local, identifier les ports ouverts et les services en cours d'ex&eacute;cution.</p>
+        <div class="proj-tags"><span class="tag perso">Python</span><span class="tag perso">Scapy</span><span class="tag perso">Scan r&eacute;seau</span><span class="tag perso">Automatisation</span></div>
       </div>
     </div>
   </div>
@@ -335,16 +356,10 @@ footer{background:#0D2840;text-align:center;padding:1.3rem;font-size:0.76rem;col
   <h2 class="section-title">Ma <em>formation</em></h2>
   <div class="timeline">
     <div class="tl-item">
-      <div class="tl-date">2025 &ndash; 2026 &middot; En cours</div>
+      <div class="tl-date">2024 &ndash; pr&eacute;sent &middot; En cours</div>
       <div class="tl-school">Institut Africain d'Informatique (IAI-TOGO), Lom&eacute;</div>
-      <div class="tl-diploma">Licence 2 &ndash; Administration &amp; S&eacute;curit&eacute; des R&eacute;seaux (ASR)</div>
-      <div class="tl-courses">Administration r&eacute;seau &middot; S&eacute;curit&eacute; informatique &middot; Virtualisation &middot; WEB 2 &middot; Cloud computing &middot; Protocoles TCP/IP &middot; Maintenance informatique</div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-date">2024 &ndash; 2025</div>
-      <div class="tl-school">Institut Africain d'Informatique (IAI-TOGO), Lom&eacute;</div>
-      <div class="tl-diploma">Licence 1 &ndash; Administration &amp; S&eacute;curit&eacute; des R&eacute;seaux (ASR)</div>
-      <div class="tl-courses">Administration r&eacute;seau &middot; Bases de donn&eacute;es &middot; Langage C &middot; Linux &amp; Windows Server &middot; Python &middot; POO &middot; WEB 1</div>
+      <div class="tl-diploma">Licence ASR &ndash; Administration &amp; S&eacute;curit&eacute; des R&eacute;seaux</div>
+      <div class="tl-courses">Administration r&eacute;seau &middot; S&eacute;curit&eacute; informatique &middot; Virtualisation &middot; WEB 1 &amp; 2 &middot; Cloud computing &middot; TCP/IP &middot; BDD &middot; Linux/Windows Server &middot; Python &middot; POO &middot; Maintenance</div>
     </div>
     <div class="tl-item">
       <div class="tl-date">2023 &ndash; 2024</div>
@@ -359,11 +374,11 @@ footer{background:#0D2840;text-align:center;padding:1.3rem;font-size:0.76rem;col
   <h2 class="section-title">Me <em>contacter</em></h2>
   <div class="contact-grid">
     <div class="contact-intro">
-      <p>Je suis activement &agrave; la recherche d'un stage en administration et s&eacute;curit&eacute; des r&eacute;seaux dans le cadre de ma deuxi&egrave;me ann&eacute;e de Licence ASR &agrave; l'IAI-TOGO.</p>
+      <p>Je suis activement &agrave; la recherche d'un stage en <strong style="color:var(--accent)">d&eacute;veloppement logiciel</strong> ou en <strong style="color:var(--accent)">administration &amp; s&eacute;curit&eacute; des r&eacute;seaux</strong>.</p>
       <br>
-      <p>N'h&eacute;sitez pas &agrave; me contacter pour toute opportunit&eacute; de collaboration ou pour obtenir plus d'informations sur mon parcours et mes comp&eacute;tences.</p>
+      <p>N'h&eacute;sitez pas &agrave; me contacter pour toute opportunit&eacute; de collaboration ou pour obtenir plus d'informations sur mon parcours.</p>
       <br>
-      <p style="color:rgba(255,255,255,0.4);font-size:0.83rem;">R&eacute;f&eacute;rences disponibles sur demande.</p>
+      <a href="CV_makafui_v2.docx" download class="btn btn-cv" style="margin-top:0.5rem;">&#8659; T&eacute;l&eacute;charger mon CV</a>
     </div>
     <div class="contact-items">
       <div class="c-item">
@@ -380,13 +395,12 @@ footer{background:#0D2840;text-align:center;padding:1.3rem;font-size:0.76rem;col
       </div>
       <div class="c-item">
         <div class="c-icon">&#10003;</div>
-        <div class="c-text"><strong>Disponibilit&eacute;</strong><span>Stage &ndash; Licence 2 ASR &middot; 2025-2026</span></div>
+        <div class="c-text"><strong>Disponibilit&eacute;</strong><span>Stage &ndash; Licence ASR &middot; 2025-2026</span></div>
       </div>
     </div>
   </div>
 </section>
 
 <footer>&copy; 2026 &middot; Makafui Komlan L&eacute;opoldo de MEDEIROS &middot; Lom&eacute;, Togo</footer>
-
 </body>
 </html>
